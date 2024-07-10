@@ -2,42 +2,45 @@
 #from Board import *
 #from player import *
 
+class Board:
 
+    def __init__(self) :
+         #self.row=row
+         #self.cell=cell
+         pass
 
-if __name__=="__main__":
-    l=[[" " for _ in range(7)] for _ in range(8) ]
-    char=" "
-    row=6
-    cell=7
-    
-    l[0][0]="O"
-    i=0
-    j=0
-    count=0
-    count_nbr=0
+    #row=6
+    #cell=7
+    def board(self,row,cell):
+        l=[[" " for _ in range(7)] for _ in range(8) ]
+        char=" "
+        i=0
+        j=0
+        count=0
+        count_nbr=0
 
-    while(count_nbr<cell):
+        while(count_nbr<cell):
             print(f"  {count_nbr} ",end='')
             count_nbr+=1
-    print("")
-    while i<row:
+        print("")
+        while i<row:
+
+            while(count<cell):
+                print("+---",end='')
+                count+=1
+            print("+")
+            count=0
+            while(j<cell):
+                print(f'| {l[i][j]}',end=' ')
+                j+=1
+            print("|")
+            j=0
+            i+=1
 
         while(count<cell):
             print("+---",end='')
             count+=1
         print("+")
-        count=0
-        while(j<cell):
-            print(f'| {l[i][j]}',end=' ')
-            j+=1
-        print("|")
-        j=0
-        i+=1
-
-    while(count<cell):
-        print("+---",end='')
-        count+=1
-    print("+")
 
 
 
