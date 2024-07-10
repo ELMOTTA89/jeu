@@ -12,17 +12,19 @@ class Board:
     #row=6
     #cell=7
     def board(self,row,cell):
-        l=[[" " for _ in range(7)] for _ in range(8) ]
+        l=[[" " for _ in range(row+1)] for _ in range(cell+1) ]
         char=" "
         i=0
         j=0
         count=0
         count_nbr=0
-
+        #Loop to display number of cells
         while(count_nbr<cell):
             print(f"  {count_nbr} ",end='')
             count_nbr+=1
         print("")
+
+        #Loop to display board
         while i<row:
 
             while(count<cell):
