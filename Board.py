@@ -14,6 +14,12 @@ if __name__=="__main__":
     i=0
     j=0
     count=0
+    count_nbr=0
+
+    while(count_nbr<cell):
+            print(f"  {count_nbr} ",end='')
+            count_nbr+=1
+    print("")
     while i<row:
 
         while(count<cell):
