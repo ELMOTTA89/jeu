@@ -11,14 +11,19 @@ class Board:
 
     #row=6
     #cell=7
-    def board(self,row,cell):
+    def board(self,row,cell,choix,symbole):
+        #saisie de Board
+
         l=[[" " for _ in range(row+1)] for _ in range(cell+1) ]
         char=" "
         i=0
         j=0
         count=0
         count_nbr=0
+        count_choix=0
+
         #Loop to display number of cells
+
         while(count_nbr<cell):
             print(f"  {count_nbr} ",end='')
             count_nbr+=1
@@ -33,7 +38,10 @@ class Board:
             print("+")
             count=0
             while(j<cell):
+                if(count_choix==choix):
+                    l[i][j]=symbole
                 print(f'| {l[i][j]}',end=' ')
+                count_choix+=1
                 j+=1
             print("|")
             j=0
@@ -43,6 +51,9 @@ class Board:
             print("+---",end='')
             count+=1
         print("+")
+
+        ###### remplissage ###
+
 
 
 
